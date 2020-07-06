@@ -1,0 +1,22 @@
+- Añadir en todos los dominios un metodo toString. -> HECHO
+
+- En el método getSeveral, tener en cuenta AND OR? -> Se crean métodos especificos para cada tipo de búsqueda.
+  por ahora sólo está en el dominio localidad
+  Se podría incluir en los métodos de busqueda un parámetro para que indicar and - or
+
+- Renombrar metodo getSeveral, se pueden tomar todos los elemenos o varios o uno.
+
+- Normalizar acentos, mayúsculas, minúsculas. En el caso de lo acentos, parsear y sustituir por asteriscos.
+  Crear un superclase en servicio de la cual deriven todos los servicios y sea la que se encarge de parsear la 
+  entrada.-> Se crea la clase Query, para crear las consultas y normaliza la entrada
+
+- Operador like en la consultas. Usar like o igual(=). En el parseo de la frase si se detecta un comodín 
+  usar un like, en caso contrario un =. -> En la clase Query
+
+- Crear un método  WHERE, encargado de crear la clausula where, para tener en cuenta comodines, and or, like... etc
+  tambíen para poder enlazarla con otras consultas SELECTS.
+
+- Para crear un elemento nuevo en la tabla, pasar una instancia de ese nuevo elemento -> hecho en el dominio localidad
+
+- En la implementación de los repositorios debemos tener en cuenta los tipos de campos de búsqueda, si son int, 
+  char... etc, ya que hay casos en los que hay que incluir las comillas simples.
